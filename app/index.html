@@ -9,12 +9,97 @@
     <title>туры</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
+        <div class="header__container">
+            <a href="#">
+                <picture>
+                    <source type="image/webp" srcset="img/header-logo/Логотип-320+.webp" media="(max-width: 767px)">
+                    <source type="image/webp" srcset="img/header-logo/Логотип-768+.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source type="image/webp" srcset="img/header-logo/Логотип-1024+.webp" media="(min-width: 1024px) and (max-width: 1919px)">
+                    <source type="image/webp" srcset="img/header-logo/Логотип-1920+.webp" media="(min-width: 1920px)">
+                    <img src="img/header-logo/Логотип-1920+.png" alt="логотип сайта" class="header__logo">
+                </picture>
+            </a>
+    
+            <nav class="header__nav">
+                <button id="js-btn-open-menu" class="header__btn-open-menu" type="button" aria-label="открыть меню" aria-controls="js-menu-block" aria-expanded="false">
+                    <span class="header__btn-open-menu_burger"></span>
+                    <span class="header__btn-open-menu_burger"></span>
+                    <span class="header__btn-open-menu_burger"></span>
+                </button>
+    
+                <div id="js-menu-block" class="header__nav-list-container">
+                    <button id="js-btn-close-menu" class="header__btn-close-menu" type="button" aria-label="закрыть меню" aria-controls="js-menu-block" aria-expanded="true">
+                        <span class="header__btn-close-menu_close"></span>
+                        <span class="header__btn-close-menu_close"></span>
+                    </button>
 
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="#">
+                                О нас
+                            </a>
+                        </li>
+        
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="#">
+                                Проекты
+                            </a>
+                        </li>
+        
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="#">
+                                Этапы
+                            </a>
+                        </li>
+        
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="#">
+                                Отзывы
+                            </a>
+                        </li>
+        
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <form class="header__search-block" tabindex="-1">             
+                <input id="js-input-search" class="header__input-search" type="text" aria-label="поле поиска" placeholder="Поиск ...">
+
+                <button id="js-btn-search" class="header__btn-search" type="submit" aria-label="кнопка поиска"></button>
+            </form>
+        </div>
     </header>
 
     <main class="main">
+        <section class="presentation container">
+            <div class="presentation__container">
+                <div id="js-presentation-swiper" class="swiper-container">
+                    <ul id="js-presentation-track" class="swiper-wrapper"></ul>
 
+                    <div id="js-presentation-pagination" class="swiper-pagination presentation__pagination"></div>
+                </div>
+
+                <div class="presentation__info-container">
+                    <h1 class="presentation__titel">
+                        Проектные решения любой сложности
+                    </h1>
+    
+                    <p class="presentation__discription">
+                        Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+                    </p>
+    
+                    <button class="presentation__btn">
+                        Заказать расчёт
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

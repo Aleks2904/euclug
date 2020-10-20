@@ -19,10 +19,20 @@ var gulp         = require('gulp'), // Подключаем Gulp
     browserSync   = require('browser-sync').create();
 
 const jsFiles = [ 
-    //js файлы
+        //libs
+    'node_modules/swiper/swiper-bundle.min.js',
+        //header
+    'app/js/search-header.js',
+    'app/js/menu-header.js',
+        //section presentation
+    'app/js/presentation-swiper-content.js',
+    'app/js/presentation-swiper-slides.js',
+    'app/js/presentation-swiper.js',
+
 ]
 
 const cssFiles = [
+    'node_modules/swiper/swiper-bundle.min.css',
     'app/css/libs/normalize.css',
     'app/css/fonts.css',
     'app/scss/main.scss'

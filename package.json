@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-  },
-
+  "bugs": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "clean-css": "^4.2.3",
@@ -36,7 +33,8 @@
     "imagemin-pngquant": "^8.0.0",
     "rename": "^1.0.4",
     "sass-inline-svg": "^1.2.3",
-    "source-map": "^0.7.3"
+    "source-map": "^0.7.3",
+    "swiper": "^6.3.3"
   },
   "dependencies": {
     "gulp-sass-inline-svg": "^1.0.3",
@@ -44,7 +42,6 @@
     "jquery": "^3.5.1",
     "jquery-form-styler": "^2.0.2",
     "jquery-validation": "^1.19.2",
-    "jquery.maskedinput": "^1.4.1",
-    "swiper": "^6.3.2"
+    "jquery.maskedinput": "^1.4.1"
   }
 }

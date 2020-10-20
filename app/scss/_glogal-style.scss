@@ -1,0 +1,38 @@
+$YELLOW: #FF9900;
+$BLACK : black;
+$WHITE: white;
+
+$paddingXContainer768: 50px;
+$paddingXContainer320: 15px;
+
+.container{
+    margin: 0 auto;
+
+    @media (min-width: 1920px) {
+        max-width: 1770px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1919px) {
+        padding: 0 $paddingXContainer768;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0 $paddingXContainer320;
+    }
+}
+
+.open-modal{
+    overflow: none;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $BLACK;
+        opacity: 0.4;
+        z-index: 8;
+    }
+}
