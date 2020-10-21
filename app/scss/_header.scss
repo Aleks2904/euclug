@@ -1,11 +1,16 @@
 .header {
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+
     
     &__container {
         display: flex;
         align-items: center;
 
-        @media (min-width: 1024px){
+        @media(min-width: 1920px){
+            height: 102px;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1919px){
             height: 100px;
         }
 
@@ -18,8 +23,18 @@
         }
     }
 
-    &__logo {
+    &__logo-a{
+        outline-color: $YELLOW;
+        padding: 3px;
+    }
 
+    &__logo {
+        @media (min-width:768px) and (max-width:1919px){
+            margin-top: 2px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 4px;
+        }
     }
 
     &__nav {
@@ -191,6 +206,10 @@
     &__nav-list {
         display: flex;
 
+        @media (min-width: 1920px){
+            padding-top: 5px;
+        }
+
         @media (max-width: 1919px){
             flex-direction: column;
             align-items: center;
@@ -199,14 +218,9 @@
     }
 
     &__nav-item {
-        &:hover > .header__nav-link{
-            border-color: $YELLOW;
-            transition: border-color 0.3s;
-        };
-
         @media (min-width:1920px) {
             &:not(:last-child){
-                margin-right: 85px;
+                margin-right: 88px;
             }
         }
 
@@ -215,12 +229,18 @@
                 margin-bottom: 3vh;
             }
         }
+
+        &:hover > .header__nav-link{
+            border-color: $YELLOW;
+            transition: border-color 0.3s;
+        };
     }
 
     &__nav-link {
         font-weight: 600;
         font-size: 18px;
         line-height: 1px;
+        letter-spacing: 0.4px;
         white-space: nowrap;
 
         cursor: pointer;
@@ -245,11 +265,20 @@
 
     &__search-block {
         @media (min-width: 1920px) {
-            margin-left: 71px;
+            margin-left: 57px;
+            margin-top: 3px;
         }
 
         @media (min-width:768px) and (max-width: 1919px){
             margin-left: auto;
+        }
+
+        @media(min-width:1024px) and (max-width: 1919px){
+            margin-top: 6px;
+        }
+
+        @media(min-width:768px) and (max-width: 1023px){
+            margin-top: 0px;
         }
 
         @media (min-width: 768px){

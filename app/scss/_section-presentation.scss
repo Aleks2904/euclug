@@ -1,15 +1,22 @@
 .presentation {
+    @media (min-width: 1920px){
+        margin-bottom: 102px;
+    }
+
+    @media(min-width: 768px) and (max-width: 1919px){
+        margin-bottom: 61px;
+    }
 
     @media (min-width: 768px) and (max-width: 1023px){
         padding: 0 !important;
     }
 
-    &__container {
-        position: relative;
+    @media(max-width: 767px){
+        margin-bottom: 38px;
     }
 
-    &__slide{
-
+    &__container {
+        position: relative;
     }
 
     &__img{
@@ -29,12 +36,14 @@
         }
     
         @media (max-width: 767px) {
-            height: 265px;
+            height: 262px;
         }
     }
 
     &__pagination{
-
+        @media(min-width:768px){
+            margin-bottom: 10px;
+        }
     }
 
     &__info-container {
@@ -60,9 +69,8 @@
     
         @media (min-width: 768px) and (max-width: 1023px) {
             margin-top: 191px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
+            left: 48px;
+            width: 80%;
         }
     
         @media (max-width: 767px) {
@@ -78,16 +86,24 @@
         color: $WHITE;
 
         @media (min-width: 1920px) {
-            margin-bottom: 32px;
+            margin-bottom: 18px;
 
             font-size: 70.3742px;
             line-height: 86px;
         }
-    
-        @media (min-width: 768px) and (max-width: 1919px) {
-            margin-bottom: 18px;
+
+        @media (min-width: 1024px) and (max-width: 1919px) {
+            margin-bottom: 10px;
 
             font-size: 60px;
+            line-height: 73px;
+        }
+    
+        @media (min-width: 768px) and (max-width: 1023px) {
+            margin-bottom: 11px;
+
+            letter-spacing: 1px;
+            font-size: 59px;
             line-height: 73px;
         }
     
@@ -105,27 +121,42 @@
         color: $WHITE;
 
         @media (min-width: 1920px) {
+            width: 95%;
             margin-bottom: 97px;
 
             font-weight: 700;
             font-size: 23.4581px;
             line-height: 29px;
+            word-spacing: 0.3px;
+            letter-spacing: 0.6px;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1919px) {
+            margin-bottom: 110px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px){
+            margin-bottom: 109px;
+            max-width: 90%;
         }
     
         @media (min-width: 768px) and (max-width: 1919px) {
-            margin-bottom: 110px;
-
             font-weight: 700;
             font-size: 20px;
             line-height: 24px;
+            word-spacing: 0.3px;
+            letter-spacing: 0.6px;
         }
     
         @media (max-width: 767px) {
-            margin-bottom: 34px;
+            margin-bottom: 36px;
 
             font-weight: 500;
             font-size: 12px;
             line-height: 15px;
+
+            max-width: 85%;
+            text-align: center;
 
             text-align: center;
         }
@@ -157,15 +188,35 @@
 
             transition: opacity .3s;
         }
-    
-        @media (min-width: 768px) {
+
+        @media(min-width: 1920px){
+            margin-left: 3px;
+
             font-size: 24px;
+            letter-spacing: 0.8px;
+
+            width: 280px;
+            height: 80px;
+        }
+
+        @media (min-width: 1024px) and (max-width:1919px) {
+            margin-left: 0px;
+        }
+
+        @media (min-width: 768px) and (max-width:1023px) {
+            margin-left: 1px;
+        }
+    
+        @media (min-width: 768px) and (max-width:1919px) {
+            font-size: 24px;
+            letter-spacing: 1.2px;
 
             width: 287px;
             height: 80px;
         }
     
         @media (max-width: 767px) {
+            
             font-size: 12px;
 
             width: 162px;
@@ -184,12 +235,21 @@
 
 //swiper castom
 
+#js-presentation-swiper .swiper-pagination-bullet:focus,
+#js-presentation-swiper .swiper-pagination-bullet:hover{
+    border-color: $YELLOW;
+}
+
 #js-presentation-swiper .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
 
     outline: none;
     border: none;
+
+    margin: 0 10px;
+
+    border: 3px solid transparent;
 
     background: rgba(255, 255, 255, 0.4);
 }

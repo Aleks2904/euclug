@@ -1,7 +1,8 @@
 $YELLOW: #FF9900;
-$BLACK : black;
+$BLACK :#333333;
 $WHITE: white;
 
+$paddingXContainer1920: 75px;
 $paddingXContainer768: 50px;
 $paddingXContainer320: 15px;
 
@@ -9,7 +10,8 @@ $paddingXContainer320: 15px;
     margin: 0 auto;
 
     @media (min-width: 1920px) {
-        max-width: 1770px;
+        max-width: 1920px;
+        padding: 0 $paddingXContainer1920;
     }
 
     @media (min-width: 768px) and (max-width: 1919px) {
