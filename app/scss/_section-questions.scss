@@ -13,6 +13,25 @@
         @include px1920{
             margin-left: 2px;
         }
+
+        @include px768-1023{
+            font-size: 47px;
+            line-height: 1px;
+            font-weight: 400;
+            letter-spacing: 2.3px;
+
+            margin-left: 2px;
+            margin-bottom: 66px;
+        }
+
+        @include px767 {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
     }
 
     &__list {
@@ -30,6 +49,17 @@
         @include px1024-1399{
             padding-top: 35px;
             padding-bottom: 33px;   
+        }
+
+        @include px768-1023{
+            padding-top: 35px;
+            padding-bottom: 24px;   
+        }
+
+        @include px767{
+            padding-top: 21px;
+            padding-bottom: 22px;   
+            padding-left: 1px;
         }
     }
 
@@ -62,10 +92,25 @@
         }
 
         @include px1024-1399{
+            max-width: 70%;
+        }
+
+        @include px768-1399{
             font-size: 22px;
             line-height: 32px;
             font-weight: 700;
             letter-spacing: 1px;
+            
+        }
+
+        @include px768-1023{
+            max-width: 84%;
+        }
+
+        @include px767{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
             max-width: 70%;
         }
     }
@@ -77,8 +122,6 @@
 
         position: relative;
 
-        width: 50px;
-        height: 50px;
         border-radius: 50%;
 
         background-color: $GRAY;
@@ -96,6 +139,18 @@
             background-color: $DARK-GRAY;
 
             transition: background-color 0.3s;
+        }
+
+        @include px768{
+            width: 50px;
+            height: 50px;
+        }
+
+        @include px767{
+            width: 30px;
+            height: 30px;
+            margin-top: 2px;
+            margin-right: -2px;
         }
 
         @include px1024{
@@ -137,7 +192,18 @@
     &__container-response {
         display: none;
         overflow: hidden;
-        margin-top: 30px;
+
+        @include px1400{
+            margin-top: 30px;
+        }
+
+        @include px768-1399{
+            margin-top: 20px;
+        }
+
+        @include px767{
+            margin-top: 10px;
+        }
     }
 
     &__response {
@@ -153,18 +219,33 @@
             transition: transform 0.5s, opacity 0.5s;
         }
 
-        @include px1024{
+        &_active2{
+            transform: translateX(120%);
+            opacity: 0;
+
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        @include px768{
             font-size: 16px;
             line-height: 32px;
             font-weight: 400;
         }
 
-        @include px1920{
+        @include px1400{
             max-width: 60%;
         }
 
-        @include px1024{
-            max-width: 80%;
+        @include px768-1399{
+            max-width: 85%;
+        }
+
+        @include px767 {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+
+            max-width: 90%;
         }
 
     }

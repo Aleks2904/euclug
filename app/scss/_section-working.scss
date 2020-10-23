@@ -8,6 +8,14 @@
         margin-bottom: 90px;
     }
 
+    @include px768-1023{
+        margin-bottom: 88px;
+    }
+
+    @include px767{
+        margin-bottom: 38px;
+    }
+
     &__title {
         color: $BLACK;
         font-weight: 400;

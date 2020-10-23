@@ -27,6 +27,16 @@ $( document ).ready(function(){
 
         pElem.slideToggle('slowe');
         text.toggleClass('questions__response_active1');
+
+        if(!text.hasClass("questions__response_active1")){
+            console.log(123);
+
+            text.addClass('questions__response_active2');
+
+            setTimeout(function(){
+                text.removeClass('questions__response_active2');
+            }, 300)
+        }
     
         btn.attr("aria-expanded" ,function(index, attr){
             if(attr == 'false'){
@@ -55,6 +65,16 @@ $( document ).ready(function(){
 
         pElem.slideToggle('slowe');
         text.toggleClass('questions__response_active1');
+
+        if(!text.hasClass("questions__response_active1")){
+            console.log(123);
+
+            text.addClass('questions__response_active2');
+
+            setTimeout(function(){
+                text.removeClass('questions__response_active2');
+            }, 300)
+        }
     
         btn.attr("aria-expanded" ,function(index, attr){
             if(attr == 'false'){
@@ -79,6 +99,16 @@ $( document ).ready(function(){
         text.removeClass('questions__response_active1');
         btn.attr("aria-expanded", "false");
         btn.removeClass('questions__item-btn_rotate');
+
+        if(!text.hasClass("questions__response_active1")){
+            console.log(123);
+
+            text.addClass('questions__response_active2');
+
+            setTimeout(function(){
+                text.removeClass('questions__response_active2');
+            }, 300)
+        }
     };
     
 });
