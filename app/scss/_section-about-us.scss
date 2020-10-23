@@ -1,40 +1,40 @@
 .about-us {
-    @media(min-width:1420px){
+    @include px1400{
         margin-bottom: 128px;
     }
 
-    @media(min-width: 768px) and (max-width: 1419px){
+    @include px768-1399{
         margin-bottom: 90px;
     }
 
-    @media(max-width: 767px){
+    @include px767{
         margin-bottom: 66px;
     }
 
     &__container {
         display: flex;
 
-        @media(min-width: 1420px){
+        @include px1400{
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        @media(max-width:1419px){
+        @include px1399 {
             flex-direction: column;
         }
     }
 
     &__article {
-        @media(min-width: 1420px){
+        @include px1400 {
             width: 100%;
             margin-bottom: 43px;
         }
 
-        @media(min-width: 768px) and (max-width: 1419px){
+        @include px768-1919 {
             margin-bottom: 58px;
         }
 
-        @media(max-width: 767px){
+        @include px767 {
             margin-bottom: 11px;
         }
     }
@@ -45,7 +45,7 @@
         color: $BLACK;
 
 
-        @media(min-width:1220px){
+        @include px1400 {
             letter-spacing: 2.4px;
             font-size: 48px;
 
@@ -53,7 +53,7 @@
             margin-bottom: 26px;
         }
 
-        @media(min-width: 768px) and (max-width: 1419px){
+        @include px768-1399 {
             letter-spacing: 2.6px;
             font-size: 48px;
 
@@ -61,7 +61,7 @@
             margin-bottom: 31px;
         }
 
-        @media(max-width:767px){
+        @include px767 {
             font-size: 24px;
             letter-spacing: 1.8px;
             margin-bottom: 4px;
@@ -85,17 +85,17 @@
 
         }
 
-        @media (min-width:1220px){
+        @include px1400{
             width: 70%;
         }
 
-        @media (min-width:768px){
+        @include px768{
             font-size: 18px;
             line-height: 32px;
             letter-spacing: 0.19px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-size: 14px;
             line-height: 28px;
             letter-spacing: 1px;
@@ -103,46 +103,46 @@
     }
 
     &__info-baner {
-        @media(min-width: 1420px){
+        @include px1400{
             width: 49.15%;
             max-height: 622px;
             position: relative;
         }
 
-        @media(min-width: 1024px) and (max-width: 1419px){
+        @include px1024-1399{
             position: relative;
             margin-bottom: 50px;
             max-height: 640px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023{
             position: relative;
             max-height: 650px;
             margin-bottom: 40px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             margin-bottom: 37px;
         }
     }
 
     &__info-img {
-        @media(min-width: 1420px){
+        @include px1400{
             width: 100%;
             max-height: 622px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1419px){
+        @include px1024-1399{
             width: 100%;
             max-height: 640px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023{
             height: 650px;
             object-fit: cover;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             height: 200px;
             width: 100%;
             object-fit: cover;
@@ -151,7 +151,7 @@
     }
 
     &__info-container {
-        @media(min-width: 768px){
+        @include px768 {
             width: 100%;
             display: flex;
             align-items: center;
@@ -163,21 +163,21 @@
             background: rgba(0, 0, 0, 0.5);
         }
 
-        @media(min-width: 1420px){
+        @include px1400 {
             height: 176px;
 
             padding-left: 55px;
             padding-right: 68px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1419px){
+        @include px1024-1399 {
             height: 173px;
 
             padding-left: 45px;
             padding-right: 50px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023 {
             height: 173px;
 
             padding-left: 30px;
@@ -188,7 +188,7 @@
     &__info-discription {
         letter-spacing: 1px;
 
-        @media(min-width: 768px){
+        @include px768 {
             font-weight: 700;
             font-size: 16px;
             line-height: 32px;
@@ -196,7 +196,7 @@
             width: 68%;
         }
 
-        @media(max-width:767px){
+        @include px767 {
             font-size: 14px;
             line-height: 28px;
 
@@ -215,7 +215,7 @@
 
         cursor: pointer;
 
-        @media(min-width: 768px){
+        @include px768{
             font-size: 16px;
             color: $WHITE;
 
@@ -223,10 +223,10 @@
 
             border: 3px solid $YELLOW;
 
-            transition: background 0.3s;
+            transition: background-color 0.3s;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-size: 12px;
             color: $YELLOW;
 
@@ -234,34 +234,34 @@
 
             border: 2px solid $YELLOW;
 
-            transition: background 0.3s color 0.3s;
+            transition: background-color 0.3s color 0.3s;
         }
 
         &:hover,
         &:focus,
         &:active{
-            background: rgba(255, 153, 0, 0.6);
+            background-color: rgba(255, 153, 0, 0.6);
 
-            @media(min-width: 768px){
-                transition: background 0.3s;
+            @include px768 {
+                transition: background-color 0.3s;
             }
 
-            @media(max-width: 767px){
+            @include px767 {
                 color: $WHITE;
-                transition: background 0.3s color 0.3s;
+                transition: background-color 0.3s color 0.3s;
             }
         }
     }
 
     &__list {
-        @media(min-width: 1420px){
+        @include px1400 {
             width: 49.15%;
             margin-top: 2px;
         }
     }
 
     &__item {
-        @media (min-width: 768px) {
+        @include px768 {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -270,7 +270,7 @@
             padding: 15px;
         }
 
-        @media(min-width: 1420px){
+        @include px1400 {
             height: 295px;
 
             padding-right: 110px;
@@ -281,7 +281,7 @@
             }
         }
 
-        @media(min-width: 1024px) and (max-width: 1419px){
+        @include px1024-1399 {
             height: 295px;
 
             padding-right: 120px;
@@ -292,7 +292,7 @@
             }
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023 {
             height: 235px;
 
             padding-right: 32px;
@@ -303,7 +303,7 @@
             }
         }
 
-        @media (max-width: 767px) {
+        @include px767 {
             
             &:not(:last-child){
                 margin-bottom: 20px;
@@ -312,25 +312,26 @@
     }
 
     &__item-svg {
-        @media(min-width: 1024px){
+        @include px1024 {
             width: 240px;
             height: 150px;
         }
 
-        @media(min-width: 1420px){
+        @include px1400 {
             margin-top: -17px;
+            padding-right: 15px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1419px){
+        @include px1024-1399 {
             margin-top: -10px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023 {
             width: 140px;
             height: 105px;
         }
 
-        @media (max-width: 767px) {
+        @include px767 {
             width: 70px;
             height: 55px;
 
@@ -343,41 +344,41 @@
         font-weight: 400;
         color: $BLACK;
 
-        @media(min-width: 768px){
+        @include px768{
             font-size: 16px;
             line-height: 32px;
         }
 
-        @media(min-width: 1024px){
+        @include px1024{
             letter-spacing: .5px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023{
             letter-spacing: 1.2px;
         }
 
-        @media (max-width: 767px){
+        @include px767{
             font-size: 14px;
             letter-spacing: 1.1px;
             line-height: 27px;
         }
 
         &_title{
-            @media(min-width: 768px){
+            @include px768{
                 font-weight: 700;
                 line-height: 32px;
                 font-size: 26px;
             }
 
-            @media(min-width: 1024px){
+            @include px1024{
                 letter-spacing: .5px;
             }
 
-            @media(min-width: 768px) and (max-width: 1023px){
+            @include px768-1023{
                 letter-spacing: .4px;
             }
 
-            @media (max-width:767px){
+            @include px767{
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 22px; 

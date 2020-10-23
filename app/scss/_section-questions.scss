@@ -1,7 +1,7 @@
 .questions {
 
     &__title {
-        @media(min-width: 1024px){
+        @include px1024{
             font-size: 48px;
             line-height: 1px;
             font-weight: 400;
@@ -10,7 +10,7 @@
             margin-bottom: 66px;
         }
 
-        @media(min-width: 1920px){
+        @include px1920{
             margin-left: 2px;
         }
     }
@@ -22,12 +22,12 @@
     &__item {
         border-bottom: 1px solid $GRAY;
 
-        @media(min-width: 1400px){
+        @include px1400{
             padding-top: 29px;
             padding-bottom: 31px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1399px){
+        @include px1024-1399{
             padding-top: 35px;
             padding-bottom: 33px;   
         }
@@ -38,7 +38,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @media(min-width: 1920px){
+        @include px1920{
             padding-left: 5px;
             padding-right: 2px;
         }
@@ -54,14 +54,14 @@
             transition: color 0.3s;
         }
 
-        @media(min-width:1400px){
+        @include px1400{
             font-size: 24px;
             line-height: 32px;
             font-weight: 700;
             letter-spacing: 1px;
         }
 
-        @media(min-width:1024px) and (max-width: 1399px){
+        @include px1024-1399{
             font-size: 22px;
             line-height: 32px;
             font-weight: 700;
@@ -98,7 +98,7 @@
             transition: background-color 0.3s;
         }
 
-        @media(min-width:1024px){
+        @include px1024{
             margin-top: 3px;
         }
 
@@ -153,17 +153,17 @@
             transition: transform 0.5s, opacity 0.5s;
         }
 
-        @media(min-width: 1024px){
+        @include px1024{
             font-size: 16px;
             line-height: 32px;
             font-weight: 400;
         }
 
-        @media(min-width: 1920px){
+        @include px1920{
             max-width: 60%;
         }
 
-        @media(min-width: 1024px) and (max-width: 1920px){
+        @include px1024{
             max-width: 80%;
         }
 

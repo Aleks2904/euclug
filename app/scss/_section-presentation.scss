@@ -1,17 +1,17 @@
 .presentation {
-    @media (min-width: 1920px){
+    @include px1920 {
         margin-bottom: 102px;
     }
 
-    @media(min-width: 768px) and (max-width: 1919px){
+    @include px768-1919{
         margin-bottom: 61px;
     }
 
-    @media (min-width: 768px) and (max-width: 1023px){
+    @include px768-1023{
         padding: 0 !important;
     }
 
-    @media(max-width: 767px){
+    @include px767{
         margin-bottom: 38px;
     }
 
@@ -23,25 +23,25 @@
         width: 100%;
         object-fit: cover;
 
-        @media (min-width: 1920px) {
+        @include px1920 {
             height: 620px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1919px) {
+        @include px1024-1919 {
             height: 668px;
         }
     
-        @media (min-width: 768px) and (max-width: 1023px) {
+        @include px768-1023 {
             height: 699px;
         }
     
-        @media (max-width: 767px) {
+        @include px767 {
             height: 262px;
         }
     }
 
     &__pagination{
-        @media(min-width:768px){
+        @include px768 {
             margin-bottom: 10px;
         }
     }
@@ -53,27 +53,33 @@
 
         pointer-events: none;
 
-        @media (min-width: 1920px) {
+        @include px1920 {
             margin-top: 103px;
             margin-left: 78px;
 
             width: 50%;
         }
 
-        @media (min-width: 1024px) and (max-width: 1919px) {
+        @include px1400-1919{
+            width: 80%;
+        }
+
+        @include px1024-1919 {
             margin-top: 160px;
             margin-left: 45px;
+        }
 
-            width: 80%;
+        @include px1024-1399{
+            width: 90%;
         }
     
-        @media (min-width: 768px) and (max-width: 1023px) {
+        @include px768-1023 {
             margin-top: 191px;
             left: 48px;
-            width: 80%;
+            width: 100%;
         }
     
-        @media (max-width: 767px) {
+        @include px767 {
             margin-top: 32px;
             left: 50%;
             transform: translateX(-50%);
@@ -85,21 +91,21 @@
         font-weight: 800;
         color: $WHITE;
 
-        @media (min-width: 1920px) {
+        @include px1920 {
             margin-bottom: 18px;
 
             font-size: 70.3742px;
             line-height: 86px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1919px) {
+        @include px1024-1919 {
             margin-bottom: 10px;
 
             font-size: 60px;
             line-height: 73px;
         }
     
-        @media (min-width: 768px) and (max-width: 1023px) {
+        @include px768-1023 {
             margin-bottom: 11px;
 
             letter-spacing: 1px;
@@ -107,7 +113,7 @@
             line-height: 73px;
         }
     
-        @media (max-width: 767px) {
+        @include px767 {
             margin-bottom: 6px;
 
             font-size: 20px;
@@ -120,7 +126,7 @@
     &__discription {
         color: $WHITE;
 
-        @media (min-width: 1920px) {
+        @include px1920 {
             width: 95%;
             margin-bottom: 97px;
 
@@ -131,16 +137,16 @@
             letter-spacing: 0.6px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1919px) {
+        @include px1024-1919{
             margin-bottom: 110px;
         }
 
-        @media (min-width: 768px) and (max-width: 1023px){
+        @include px768-1023 {
             margin-bottom: 109px;
             max-width: 90%;
         }
     
-        @media (min-width: 768px) and (max-width: 1919px) {
+        @include px768-1919 {
             font-weight: 700;
             font-size: 20px;
             line-height: 24px;
@@ -148,7 +154,7 @@
             letter-spacing: 0.6px;
         }
     
-        @media (max-width: 767px) {
+        @include px767 {
             margin-bottom: 36px;
 
             font-weight: 500;
@@ -189,7 +195,7 @@
             transition: opacity .3s;
         }
 
-        @media(min-width: 1920px){
+        @include px1920 {
             margin-left: 3px;
 
             font-size: 24px;
@@ -199,23 +205,23 @@
             height: 80px;
         }
 
-        @media (min-width: 1024px) and (max-width:1919px) {
+        @include px1024-1919 {
             margin-left: 0px;
         }
 
-        @media (min-width: 768px) and (max-width:1023px) {
-            margin-left: 1px;
-        }
-    
-        @media (min-width: 768px) and (max-width:1919px) {
+        @include px768-1919 {
             font-size: 24px;
             letter-spacing: 1.2px;
 
             width: 287px;
             height: 80px;
         }
+
+        @include px768-1023 {
+            margin-left: 1px;
+        }
     
-        @media (max-width: 767px) {
+        @include px767 {
             
             font-size: 12px;
 

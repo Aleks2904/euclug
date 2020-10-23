@@ -1,10 +1,10 @@
 .working {
 
-    @media(min-width: 1920px){
+    @include px1920{
         margin-bottom: 126px;
     }
 
-    @media(min-width: 1024px) and (max-width:1919px){
+    @include px1024-1919{
         margin-bottom: 90px;
     }
 
@@ -13,22 +13,22 @@
         font-weight: 400;
         line-height: 1px;
 
-        @media(min-width: 768px){
+        @include px768{
             font-size: 50px;
             letter-spacing: 2.1px;
         }
 
-        @media(min-width: 1920px){
+        @include px1920{
             margin-bottom: 83px;
             margin-left: -1px;
         }
 
-        @media(min-width: 768px) and (max-width: 1919px){
+        @include px768-1919{
             margin-bottom: 78px;
             margin-left: -4px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-size: 26px;
             letter-spacing: 0.6px;
 
@@ -40,17 +40,17 @@
         display: flex;
         margin-bottom: 10px;
 
-        @media(min-width:1920px){
+        @include px1920{
             padding-left: 2px;
         }
 
-        @media(max-width: 1023px){
+        @include px1023{
             justify-content: space-between;
         }
     }
 
     &__step-item {
-        @media(min-width: 1024px){
+        @include px1024{
             &:not(:last-child){
                 margin-right: 92px;
             }
@@ -63,11 +63,11 @@
         line-height: 1px;
         letter-spacing: 0.5px;
 
-        @media(min-width:768px){
+        @include px768{
             font-size: 18px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-size: 14px;
         }
 
@@ -80,12 +80,12 @@
         border: 2px solid $BLACK;
         border-radius: 15px; 
 
-        @media(min-width: 1024px){
+        @include px1024{
             width: 470px;
             margin-bottom: 21px;
         }
 
-        @media(min-width: 320px) and (max-width:1023px){
+        @include px1023{
             width: 100%;
             margin-bottom: 16px;
         }
@@ -94,10 +94,12 @@
         background-color: transparent;
         border-radius: 15px; 
     }
+
     progress::-webkit-progress-value {
         background-color: $YELLOW;
         border-radius: 15px; 
     }
+
     progress::-moz-progress-bar {
         background-color: transparent;
     }
@@ -111,11 +113,11 @@
         &_active {
             display: flex;
 
-            @media(min-width: 1024px){
+            @include px1024{
                 justify-content: space-between;
             }
 
-            @media(min-width: 320px) and (max-width: 1023px){
+            @include px1023{
                 flex-direction: column;
             }
         }
@@ -127,12 +129,12 @@
     }
 
     &__info-content {
-        @media(min-width: 1024px){
+        @include px1024{
             width: 45%;
             margin-left: 2px;
         }
 
-        @media(min-width: 320px) and (max-width: 1023px){
+        @include px1023{
             order: 1;
         }
     }
@@ -140,7 +142,7 @@
     &__info-title {
         line-height: 1;
 
-        @media(min-width: 768px){
+        @include px768{
             font-weight: 700;
             font-size: 25px;
             letter-spacing: 0.9px;
@@ -148,7 +150,7 @@
             margin-bottom: 5px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-weight: 700;
             font-size: 18px;
             letter-spacing: 0.8px;
@@ -161,26 +163,26 @@
         overflow: auto;
         font-weight: 400;
 
-        @media(min-width: 768px){
+        @include px768 {
             line-height: 32px;
             font-size: 16px;
             letter-spacing: 0.9px;
         }
 
-        @media(min-width: 1920px){
+        @include px1920 {
             width: 85%;
             max-height: 400px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1919px){
+        @include px1024-1919 {
             max-height: 580px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023 {
             max-height: 360px;
         }
 
-        @media(max-width: 767px){
+        @include px767 {
             line-height: 28px;
             font-size: 14px;
             letter-spacing: 1px;
@@ -194,13 +196,13 @@
     }
 
     &__item-full-info {
-        @media(min-width: 768px){
+        @include px768 {
             &:not(:last-child){
                 margin-right: 30px;
             }
         }
 
-        @media(max-width: 767px){
+        @include px767{
             &:not(:last-child){
                 margin-right: 10px;
             }
@@ -217,21 +219,21 @@
         text-align: center;
         cursor: pointer;
 
-        @media(min-width: 768px){
+        @include px768{
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
 
-        @media(min-width: 1920px){
+        @include px1920{
             margin-top: 61px;
         }
 
-        @media(min-width: 768px) and (max-width: 1919px){
+        @include px768-1919{
             margin-top: 30px;
         }
 
-        @media(max-width: 767px){
+        @include px767{
             font-size: 14px;
             margin-top: 20px;
         }
@@ -241,12 +243,12 @@
             background-color: $YELLOW;
             transition: background-color 0.3s;
 
-            @media(min-width: 768px){
+            @include px768{
                 width: 175px;
                 padding: 22px 0;
             }
 
-            @media(max-width: 767px){
+            @include px767{
                 width: 164px;
                 padding: 13px 0;
             }
@@ -265,12 +267,12 @@
             background-color: transparent;
             transition: background-color 0.3s, color 0.3s;
 
-            @media(min-width: 768px){
+            @include px768{
                 width: 147px;
                 padding: 19px 0;
             }
 
-            @media(max-width: 767px){
+            @include px767{
                 width: 118px;
                 padding: 12px 0;
             }
@@ -288,28 +290,28 @@
     &__info-img {
         object-fit: cover;
 
-        @media(min-width: 1920px){
+        @include px1920{
             width: 870px;
             height: 465px;
             margin-top: 6px;
         }
 
-        @media(min-width: 1024px) and (max-width: 1919px){
+        @include px1024-1919{
             width: 100%;
             height: 100%;
             margin-top: 6px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1300px){
+        @include px1024-1399{
             max-width: 437px;
         }
 
-        @media(min-width: 768px) and (max-width: 1023px){
+        @include px768-1023{
             height: 284px;
             margin-bottom: 40px;
         }
 
-        @media(max-width:767px){
+        @include px767{
             height: 160px;
             margin-bottom: 11px;
         }

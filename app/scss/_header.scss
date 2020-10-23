@@ -6,19 +6,19 @@
         display: flex;
         align-items: center;
 
-        @media(min-width: 1920px){
+        @include px1920 {
             height: 102px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1919px){
+        @include px1024-1919 {
             height: 100px;
         }
 
-        @media (min-width:768px) and (max-width:1023px){
+        @include px768-1023 {
             height: 69px;
         }
 
-        @media (max-width:767px){
+        @include px767 {
             height: 45px;
         }
     }
@@ -29,10 +29,11 @@
     }
 
     &__logo {
-        @media (min-width:768px) and (max-width:1919px){
+        @include px768-1919 {
             margin-top: 2px;
         }
-        @media (max-width: 767px) {
+
+        @include px767 {
             margin-top: 4px;
         }
     }
@@ -40,15 +41,16 @@
     &__nav {
         position: relative;
 
-        @media(min-width: 1920px){
+        @include px1920 {
             margin-left: auto;
         }
-        @media(min-width:768px) and (max-width: 1919px) {
+
+        @include px768-1919 {
             order: -1;
             margin-right: auto;
         }
 
-        @media(max-width: 767px){
+        @include px767 {
             margin-left: auto;
         }
     }
@@ -57,11 +59,11 @@
 
         cursor: pointer;
 
-        @media (min-width:1920px) {
+        @include px1920 {
             display: none;
         }
 
-        @media (max-width:1919px) {
+        @include px1919 {
             outline: none;
             border: none;
             background-color: transparent;
@@ -104,11 +106,11 @@
                 pointer-events: none;
 
                 &:not(:last-child){
-                   @media(min-width: 768px){
+                   @include px768{
                         margin-bottom: 7px;
                     }
 
-                   @media(max-width: 767px){
+                   @include px767 {
                         margin-bottom: 5px;
                     }
                 }
@@ -117,11 +119,11 @@
     }
 
     &__btn-close-menu{
-        @media (min-width: 1920px){
+        @include px1920{
             display: none;
         }
 
-        @media (max-width: 1919px){
+        @include px1919{
             outline: none;
             border: none;
             background-color: transparent;
@@ -172,12 +174,11 @@
     }
 
     &__nav-list-container{
-        @media (max-width: 1919px){
+        @include px1919{
             display: none;
             opacity: 0;
+            transition: opacity 0.3s;
         }
-
-        transition: opacity 0.3s;
     }
 
     &__active-menu{
@@ -186,7 +187,7 @@
         z-index: 10;
         background-color: $WHITE;
 
-        @media(min-width: 768px) and (max-width: 1919px){
+        @include px768-1919{
             left: -$paddingXContainer768;
             top: -30px;
 
@@ -194,7 +195,7 @@
             height: 100vh;
         }
 
-        @media (max-width: 767px) {
+        @include px767 {
             right: -$paddingXContainer320;
             top: -3px;
             
@@ -206,11 +207,11 @@
     &__nav-list {
         display: flex;
 
-        @media (min-width: 1920px){
+        @include px1920{
             padding-top: 5px;
         }
 
-        @media (max-width: 1919px){
+        @include px1919{
             flex-direction: column;
             align-items: center;
             margin-top: 20%;
@@ -218,13 +219,13 @@
     }
 
     &__nav-item {
-        @media (min-width:1920px) {
+        @include px1920{
             &:not(:last-child){
                 margin-right: 88px;
             }
         }
 
-        @media (max-width: 1919px){
+        @include px1919{
             &:not(:last-child){
                 margin-bottom: 3vh;
             }
@@ -255,33 +256,33 @@
             transition: border-color 0.3s;
         };
 
-        @media(min-width: 1920px){
+        @include px1920{
             padding-bottom: 10px;
         }
-        @media(max-width: 1919px){
+        @include px1919{
             padding-bottom: 0.6vh;
         }
     }
 
     &__search-block {
-        @media (min-width: 1920px) {
+        @include px1920{
             margin-left: 57px;
             margin-top: 3px;
         }
 
-        @media (min-width:768px) and (max-width: 1919px){
+        @include px768-1919{
             margin-left: auto;
         }
 
-        @media(min-width:1024px) and (max-width: 1919px){
+        @include px1024-1919{
             margin-top: 6px;
         }
 
-        @media(min-width:768px) and (max-width: 1023px){
+        @include px768-1023{
             margin-top: 0px;
         }
 
-        @media (min-width: 768px){
+        @include px768{
             position: relative;
 
             &:hover > .header__input-search,
@@ -294,13 +295,13 @@
                 transition: width 0.3s, height 0.3s, opacity 0.1s;
             }
         }
-        @media(max-width: 767px){
+        @include px767{
             display: none;
         }
     }
 
     &__input-search {
-        @media (min-width: 768px){
+        @include px768{
             padding: 7px 40px 7px 7px ;
             border: 2px solid $YELLOW;
             border-radius: 15px;
@@ -335,7 +336,7 @@
     }
 
     &__btn-search {
-        @media (min-width: 768px){
+        @include px768{
             position: absolute;
             right: 2px;
             top: 50%;
