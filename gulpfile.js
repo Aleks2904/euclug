@@ -20,6 +20,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
 
 const jsFiles = [ 
         //libs
+    'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
         //header
     'app/js/search-header.js',
@@ -30,6 +31,8 @@ const jsFiles = [
     'app/js/presentation-swiper.js',
         //section working
     'app/js/working-accordion.js',
+        //questions
+    'app/js/block-questions.js',
 
 ]
 

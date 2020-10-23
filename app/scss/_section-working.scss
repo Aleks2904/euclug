@@ -1,5 +1,12 @@
 .working {
 
+    @media(min-width: 1920px){
+        margin-bottom: 126px;
+    }
+
+    @media(min-width: 1024px) and (max-width:1919px){
+        margin-bottom: 90px;
+    }
 
     &__title {
         color: $BLACK;
@@ -12,7 +19,7 @@
         }
 
         @media(min-width: 1920px){
-            margin-bottom: 78px;
+            margin-bottom: 83px;
             margin-left: -1px;
         }
 
@@ -121,7 +128,7 @@
 
     &__info-content {
         @media(min-width: 1024px){
-            width: 50%;
+            width: 45%;
             margin-left: 2px;
         }
 
