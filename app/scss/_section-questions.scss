@@ -117,7 +117,7 @@
 
     &__item-btn {
         outline: none;
-        border: none;
+        border: 1px solid transparent;
         cursor: pointer;
 
         position: relative;
@@ -137,8 +137,8 @@
         &:focus,
         &:active{
             background-color: $DARK-GRAY;
-
-            transition: background-color 0.3s;
+            border-color: $YELLOW;
+            transition: background-color 0.3s, border-color 0.3;
         }
 
         @include px768{
@@ -164,7 +164,7 @@
             top: 50%;
             left: 50%;
 
-            width: 63%;
+            width: 70%;
             height: 2%;
 
             background-color: black;
@@ -179,7 +179,7 @@
             top: 50%;
             left: 50%;
 
-            width: 63%;
+            width: 70%;
             height: 2%;
 
 

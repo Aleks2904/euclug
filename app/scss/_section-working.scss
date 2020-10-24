@@ -71,6 +71,9 @@
         line-height: 1px;
         letter-spacing: 0.5px;
 
+        padding: 2px;
+        outline-color: $YELLOW;
+
         @include px768{
             font-size: 18px;
         }

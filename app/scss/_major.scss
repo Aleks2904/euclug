@@ -1,0 +1,16 @@
+.main{
+    @include px1400{
+        margin-bottom: 101px;
+    }
+    @include px1024-1399{
+        margin-bottom: 59px;
+    }
+
+    @include px768-1023{
+        margin-bottom: 58px;
+    }
+
+    @include px767{
+        margin-bottom: 40px;
+    }
+}

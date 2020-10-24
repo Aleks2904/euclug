@@ -1,0 +1,572 @@
+.footer {
+    display: flex;
+    background-color: $FOOTER;
+
+    @include px1024{
+        padding-top: 41px;
+        padding-bottom: 80px;
+    }
+
+    @include px1023{
+        flex-direction: column;
+
+        padding-top: 89px;
+        padding-bottom: 80px;
+    }
+
+    @include px768-1023{
+        flex-direction: column;
+
+        padding-top: 89px;
+        padding-bottom: 60px;
+    }
+
+    @include px767{
+        flex-direction: column;
+
+        padding-top: 53px;
+        padding-bottom: 25px;
+    }
+
+    &__nav-block {
+        @include px1024{
+            margin-right: auto;
+        }
+
+        @include px1023{
+            order: 1;
+        }
+
+        @include px767{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    //logo block
+
+    &__logo-link{
+        display: block;
+
+        padding: 5px;
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+
+        transition: border-color 0.3s;
+
+        &:hover,
+        &:focus,
+        &:active{
+            border-color: $YELLOW;
+
+            transition: border-color 0.3s;
+        }
+
+        @include px1400{
+            margin-bottom: 11px;
+            margin-left: -5px;
+        }
+
+        @include px1024-1399{
+            margin-bottom: 11px;
+            margin-left: -8px;
+        }
+
+        @include px768-1023{
+            margin-left: -7px;
+            margin-bottom: 5px;
+        }
+
+        @include px767{
+            margin-bottom: 5px;
+        }
+    }
+
+    &__logo {
+   
+    }
+
+    &__nav {
+    }
+
+    &__nav-list {
+        @include px1400{
+            margin-bottom: 109px;
+        }
+
+        @include px1024{
+            margin-bottom: 113px;
+        }
+
+        @include px1023{
+            display: none;
+        }
+    }
+
+    &__nav-item {
+        @include px1400 {
+            &:not(:last-child){
+                margin-bottom: 19px;
+            }
+        }
+
+        @include px1024-1399 {
+            &:not(:last-child){
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &__nav-link {
+        position: relative;
+        padding-right: 30px;
+        white-space: nowrap;
+
+        outline: none;
+
+        line-height: 1px;
+        color: $WHITE-GRAY;
+
+        transition: color 0.3s;
+
+        @include px1024 {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        &::after{
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+
+            width: 20px;
+            height: 10px;
+
+            transform: translateY(-50%);
+
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1716 0.464562L15.3536 3.64654C15.5488 3.8418 15.5488 4.15839 15.3536 4.35365L12.1716 7.53563C11.9763 7.73089 11.6597 7.73089 11.4645 7.53563C11.2692 7.34037 11.2692 7.02378 11.4645 6.82852L13.7929 4.5001H0V3.5001H13.7929L11.4645 1.17167C11.2692 0.976407 11.2692 0.659824 11.4645 0.464562C11.6597 0.2693 11.9763 0.2693 12.1716 0.464562Z' fill='%23FF9900'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+
+            opacity: 0;
+
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        &:hover,
+        &:focus,
+        &:active{
+            color: $YELLOW;
+            transition: color 0.3s;
+
+            &::after{
+                opacity: 1;
+                transform:  translateY(-50%) scale(1.4);
+
+                transition: opacity 0.4s, transform 0.4s;
+
+            }
+        }
+    }
+
+    &__social-list {
+        display: flex;
+
+        @include px767{
+            justify-content: space-between;
+            width: 46%;
+        }
+    }
+
+    &__social-item {
+        @include px768 {
+            &:not(:last-child){
+                margin-right: 25px;
+            }
+        }
+    }
+
+    &__social-link {
+        display: block;
+        outline: none;
+
+        &:hover > .footer__social-svg,
+        &:active > .footer__social-svg,
+        &:focus > .footer__social-svg{
+            fill: $YELLOW;
+
+            transition: fill 0.3s;
+        }
+
+        @include px768{         
+            width: 60px;
+            height: 60px;
+        }
+
+        @include px767{
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__social-svg {
+        fill: $SVG-COLOR;
+
+        width: 100%;
+        height: 100%;
+
+        transition: fill 0.3s;
+
+        pointer-events: none;
+    }
+
+    //form block
+
+    &__form-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include px1024{
+            padding-top: 45px;
+        }
+
+        @include px1400{
+            max-width: 570px;
+        }
+
+        @include px1024-1399{
+            max-width: 535px;
+        }
+
+        @include px768-1023{
+            width: 80%;
+            margin-bottom: 51px;
+        }
+
+        @include px767{
+            border-bottom: 1px solid $DARK-GRAY3;
+            padding-bottom: 40px;
+            margin-bottom: 14px;
+        }
+
+    }
+
+    &__form-block-title {
+        color: $WHITE-GRAY;
+        line-height: 1px;
+        font-weight: 400;
+
+        @include px768{
+            font-size: 48px;
+            letter-spacing: 2.4px;
+        }
+
+        @include px1400{
+            margin-bottom: 50px;
+        }
+
+        @include px1024-1399{
+            margin-bottom: 52px;
+        }
+
+        @include px768-1023{
+            margin-bottom: 50px;
+            margin-left: -2px;
+        }
+
+        @include px767{
+            font-weight: 400;
+            font-size: 24px;
+            letter-spacing: 1.5px;
+
+            margin-bottom: 35px;
+            margin-left: -1px;
+        }
+    }
+
+    &__form-block-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-input-text {
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: 100%;
+        background-color: $DARK-GRAY2;
+
+        &::placeholder{
+            line-height: 32px;
+            font-weight: 400;
+
+            @include px768{
+                font-size: 16px;
+                letter-spacing: 1.2px;
+            }
+
+            @include px767{
+                font-size: 14px;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active{
+            border-color: $YELLOW;
+        }
+
+        @include px1400{
+            padding: 19px;
+            margin-bottom: 26px;
+        }
+
+        @include px768-1399{
+            padding: 19px 22px;
+            margin-bottom: 25px;
+        }
+
+        @include px767{
+            padding: 19px 22px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__form-input-textarea{
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        width: 100%;
+        background-color: $DARK-GRAY2;
+
+        &::placeholder{
+            line-height: 32px;
+            font-weight: 400;
+
+            @include px768{
+                font-size: 16px;
+                letter-spacing: 1.2px;
+            }
+
+            @include px767{
+                font-size: 14px;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active{
+            border-color: $YELLOW;
+        }
+
+        @include px1400{
+            padding: 12px 21px;
+            margin-bottom: 32px;
+            height: 148px;
+        }
+
+        @include px1399{
+            padding: 13px 22px;
+            height: 150px;
+        }
+
+        @include px768-1399{
+            margin-bottom: 31px;
+        }
+
+        @include px767{
+            margin-bottom: 25px;
+        }
+    }
+
+    &__form-btn-block{
+        @include px1400{
+            margin-left: -0.3px;
+        }
+
+        @include px767{
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+    }
+
+    &__form-btn {
+        color: $WHITE;
+        background-color: $YELLOW;
+
+        cursor: pointer;
+
+        outline: none;
+        border: none;
+
+        transition: background-color 0.3s;
+
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: rgba(255, 153, 0, 0.6);
+
+            transition: background-color 0.3s;
+        }
+
+        @include px768{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            letter-spacing: 1px;
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include px1400{
+            width: 269px;
+            
+            margin-right: 25px;
+        }
+
+        @include px768-1399{
+            width: 241px;
+
+            margin-right: 20px;
+        }
+
+        @include px767{
+            width: 180px;
+
+            padding-top: 12.5px;
+            padding-bottom: 12.5px;
+            letter-spacing: 1px;
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+
+            margin-bottom: 28px;
+        }
+    }
+
+    &__form-label {
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+
+        position: relative;
+
+        color: $WHITE-GRAY;
+        line-height: 1px;
+
+        transition: color 0.3s;
+
+        &:hover{
+            color: $YELLOW;
+            transition: color 0.3s;
+        }
+
+        @include px1024{
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        @include px1400{
+            letter-spacing: 0.5px;
+            padding-left: 1.3em;
+        }
+
+        @include px768-1399{
+            letter-spacing: 0.6px;
+            padding-left: 1.2em;
+        }
+
+        @include px767{
+            letter-spacing: 0.6px;
+            padding-left: 1.3em;
+        }
+    }
+
+    &__form-input-check {
+        appearance: none;
+        position: absolute;
+    }
+
+    &__form-input-check:focus + .footer__form-span-check{
+        border-color: $YELLOW;
+    }
+
+    &__form-input-check:checked + .footer__form-span-check{
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94976 3.08233L4.00002 8.03208L1.17159 5.20365' stroke='%2397EE3F' stroke-width='2'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        @include px1024{
+            background-position: center 30%;
+        }
+
+        @include px1023{
+            background-position: 40% 30%;
+        }
+    }
+
+    &__form-input-check:disabled + .footer__form-span-check{
+        background-color: $SVG-COLOR;
+    }
+
+    &__form-input-check:checked:disabled + .footer__form-span-check{
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94976 3.08233L4.00002 8.03208L1.17159 5.20365' stroke='%23013220' stroke-width='2'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+
+        @include px1024{
+            background-position: center 30%;
+        }
+
+        @include px1023{
+            background-position: 40% 30%;
+        }
+    }
+
+    &__form-span-check {
+        position: absolute;
+        top: 48%;
+        left: 0;
+
+        transform: translateY(-50%);
+
+        width: 1em;
+        height: 1em;
+
+        background-color: transparent;
+        border: 1.5px solid $SVG-COLOR;
+    }
+
+    //flood block
+
+    &__aside-block {
+        @include px1400{
+            width: 20.5%;
+            margin-top: 85px;
+            margin-left: 13.3%;
+        }
+
+        @include px1399{
+            display: none;
+        }
+    }
+
+    &__aside-discription {
+        color: $WHITE-GRAY;
+
+        @include px1400{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+}
