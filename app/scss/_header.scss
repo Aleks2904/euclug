@@ -182,14 +182,14 @@
     }
 
     &__active-menu{
-        position: absolute;
+        position: fixed;
         display: block;
         z-index: 10;
         background-color: $WHITE;
 
         @include px768-1919{
             left: -$paddingXContainer768;
-            top: -30px;
+            top: 0px;
 
             width: 40vw;
             height: 100vh;
@@ -197,8 +197,7 @@
 
         @include px767 {
             right: -$paddingXContainer320;
-            top: -3px;
-            
+            top: 0;
             width: 100vw;
             height: 100vh;
         }

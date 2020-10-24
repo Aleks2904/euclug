@@ -2,7 +2,22 @@ document.addEventListener('DOMContentLoaded', function(){
     const btnOpen = document.querySelector('#js-btn-open-menu'),
           btnClose = document.querySelector('#js-btn-close-menu'),
           menuBlock = document.querySelector('#js-menu-block'),
-          body = document.querySelector('body');
+          body = document.querySelector('body'),
+          link = document.querySelectorAll('.header__nav-link');
+    
+    link.forEach(function(el){
+        el.addEventListener('click', function(e){
+            btnOpen.setAttribute('aria-expanded', 'false');
+            btnClose.setAttribute('aria-expanded', 'true');
+
+            menuBlock.style.cssText = 'opacity: 0;';
+            setTimeout(function(){
+                menuBlock.classList.remove('header__active-menu');
+            }, 300);
+
+            body.classList.remove('open-modal');
+        })
+    })
 
     btnOpen.addEventListener('click', function(e){
         e.preventDefault();
