@@ -1,34 +1,30 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-    const stepBtn = document.querySelector('#js-step-btn'),
-          stepList = document.querySelector('#js-step-list'),
+    const stepBtn = document.querySelectorAll('.working__step-btn'),
+          stepItem = document.querySelectorAll('.working__info-item'),
           progressBar = document.querySelector('#js-progress');
 
-    stepBtn.addEventListener('click', function(e){
-        if(e.target.tagName == 'A'){
+    stepBtn.forEach(function(el){
+        el.addEventListener('click', function(e){
             e.preventDefault();
 
-            const href = e.target.getAttribute('href'),
+            const href = e.target.getAttribute('name'),
                   step = document.querySelector(href),
-                  btnItem = stepBtn.children,
-                  stepItem = stepList.children,
                   val = e.target.getAttribute('value');
 
-            for( let i = 0 ; i < stepItem.length; i++){
-                stepItem[i].classList.remove('working__info-item_active', 'working__info-item_active-opacity');
-            }
-            for( let i = 0; i < btnItem.length; i++){
-                for( let k = 0; k < btnItem[i].children.length; k++){
-                    const link = btnItem[i].children[k]
-                    link.classList.remove('working__step-link_active');
-                }
-            }
+            stepItem.forEach(function (el){
+                el.classList.remove('working__info-item_active', 'working__info-item_active-opacity');
+            })
+            stepBtn.forEach(function(el){
+                el.classList.remove('working__step-btn_active');
+            });
 
-            e.target.classList.add('working__step-link_active');
+            e.target.classList.add('working__step-btn_active');
             step.classList.add('working__info-item_active');
             setTimeout(function(){
                 step.classList.add('working__info-item_active-opacity');
             }, 100);
             progressBar.value = val;
-        }
-    })
+
+        })
+     })
 });

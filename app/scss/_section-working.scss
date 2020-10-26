@@ -65,11 +65,12 @@
         }
     }
 
-    &__step-link {
+    &__step-btn {
         color: $BLACK;
         font-weight: 400;
-        line-height: 1px;
         letter-spacing: 0.5px;
+        background-color: transparent;
+        border: none;
 
         padding: 2px;
         outline-color: $YELLOW;

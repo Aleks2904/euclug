@@ -40,6 +40,36 @@
 
     &__item {
         border-bottom: 1px solid $GRAY;
+    }
+
+    &__btn-questions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        &:hover > .questions__item-btn-icon,
+        &:focus > .questions__item-btn-icon,
+        &:active > .questions__item-btn-icon{
+            background-color: $DARK-GRAY;
+            transition: background-color 0.3s;
+        }
+
+        &:hover > .questions__title-questions,
+        &:focus > .questions__title-questions{
+            color: $YELLOW;
+            transition: color 0.3s;
+        }
+
+        @include px1920{
+            padding-left: 5px;
+            padding-right: 2px;
+        }
 
         @include px1400{
             padding-top: 29px;
@@ -63,26 +93,10 @@
         }
     }
 
-    &__container-questions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include px1920{
-            padding-left: 5px;
-            padding-right: 2px;
-        }
-    }
-
     &__title-questions {
         cursor: pointer;
         transition: color 0.3s;
-
-        &:focus,
-        &:hover{
-            color: $YELLOW;
-            transition: color 0.3s;
-        }
+        text-align: left;
 
         @include px1400{
             font-size: 24px;
@@ -115,9 +129,8 @@
         }
     }
 
-    &__item-btn {
+    &__item-btn-icon {
         outline: none;
-        border: 1px solid transparent;
         cursor: pointer;
 
         position: relative;
@@ -131,14 +144,6 @@
         &_rotate{
             transform: rotate(45deg);
             transition: transform 0.3s;
-        }
-
-        &:hover,
-        &:focus,
-        &:active{
-            background-color: $DARK-GRAY;
-            border-color: $YELLOW;
-            transition: background-color 0.3s, border-color 0.3;
         }
 
         @include px768{
@@ -194,15 +199,20 @@
         overflow: hidden;
 
         @include px1400{
-            margin-top: 30px;
+            padding-bottom: 31px;
         }
 
-        @include px768-1399{
-            margin-top: 20px;
+        @include px1024-1399{
+            padding-bottom: 33px;   
+        }
+
+        @include px768-1023{
+            padding-bottom: 24px;   
         }
 
         @include px767{
-            margin-top: 10px;
+            padding-bottom: 22px;   
+            padding-left: 1px;
         }
     }
 

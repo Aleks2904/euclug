@@ -7,15 +7,19 @@ document.addEventListener('DOMContentLoaded', function(){
     
     link.forEach(function(el){
         el.addEventListener('click', function(e){
-            btnOpen.setAttribute('aria-expanded', 'false');
-            btnClose.setAttribute('aria-expanded', 'true');
+            let width = screen.width;
 
-            menuBlock.style.cssText = 'opacity: 0;';
-            setTimeout(function(){
-                menuBlock.classList.remove('header__active-menu');
-            }, 300);
+            if(width <= 1920){
+                btnOpen.setAttribute('aria-expanded', 'false');
+                btnClose.setAttribute('aria-expanded', 'true');
 
-            body.classList.remove('open-modal');
+                menuBlock.style.cssText = 'opacity: 0;';
+                setTimeout(function(){
+                    menuBlock.classList.remove('header__active-menu');
+                }, 300);
+
+                body.classList.remove('open-modal');
+            }
         })
     })
 

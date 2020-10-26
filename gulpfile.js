@@ -22,6 +22,7 @@ const jsFiles = [
         //libs
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'app/js/webp.js',
         //scroll
     'app/js/smooth-scrolling.js',
         //header

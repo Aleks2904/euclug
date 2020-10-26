@@ -19,7 +19,7 @@
 <body>
     <header id="header" class="header container">
         <div class="header__container">
-            <a href="#header" class="header__logo-a scroll" aria-label="ссылка на главную">
+            <a href="#header" class="header__logo-a scroll" aria-label="обновить страницу">
                 <picture>
                     <source type="image/webp" srcset="img/header-logo/Логотип-320+.webp" media="(max-width: 767px)">
                     <source type="image/webp" srcset="img/header-logo/Логотип-768+.webp" media="(min-width: 768px) and (max-width: 1023px)">
@@ -42,37 +42,39 @@
                         <span class="header__btn-close-menu_close"></span>
                     </button>
 
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a class="header__nav-link scroll" href="#about-us">
-                                О нас
-                            </a>
-                        </li>
-        
-                        <li class="header__nav-item">
-                            <a class="header__nav-link scroll" href="#presentation">
-                                Проекты
-                            </a>
-                        </li>
-        
-                        <li class="header__nav-item">
-                            <a class="header__nav-link scroll" href="#working">
-                                Этапы
-                            </a>
-                        </li>
-        
-                        <li class="header__nav-item">
-                            <a class="header__nav-link scroll" href="#questions">
-                                Отзывы
-                            </a>
-                        </li>
-        
-                        <li class="header__nav-item">
-                            <a class="header__nav-link scroll" href="#footer">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a class="header__nav-link scroll" href="#about-us">
+                                    О нас
+                                </a>
+                            </li>
+            
+                            <li class="header__nav-item">
+                                <a class="header__nav-link scroll" href="#presentation">
+                                    Проекты
+                                </a>
+                            </li>
+            
+                            <li class="header__nav-item">
+                                <a class="header__nav-link scroll" href="#working">
+                                    Этапы
+                                </a>
+                            </li>
+            
+                            <li class="header__nav-item">
+                                <a class="header__nav-link scroll" href="#questions">
+                                    Отзывы
+                                </a>
+                            </li>
+            
+                            <li class="header__nav-item">
+                                <a class="header__nav-link scroll" href="#footer">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </nav>
     
@@ -122,12 +124,6 @@
                 </article>
 
                 <div class="about-us__info-baner">
-                    <picture>
-                        <source type="image/webp" srcset="img/block-aboutUs/img1.webp">
-
-                        <img class="about-us__info-img" src="img/block-aboutUs/img1.jpg" alt="работник">
-                    </picture>
-
                     <div class="about-us__info-container">
                         <p class="about-us__info-discription">
                             Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
@@ -141,20 +137,12 @@
 
                 <ul class="about-us__list">
                     <li class="about-us__item">
-                        <svg class="about-us__item-svg" viewbox="0 0 178 153">
-                            <use xlink:href="img/symbol/sprite.svg#about-use-2" />
-                        </svg>
-
                         <p class="about-us__item-discription">
                            <span class="about-us__item-discription_title">Консультация с&nbsp;широким активом</span><br> А&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений.
                         </p>
                     </li>
 
                     <li class="about-us__item">
-                        <svg class="about-us__item-svg" viewbox="0 0 178 137">
-                            <use  xlink:href="img/symbol/sprite.svg#about-use-1"/>
-                        </svg>
-
                         <p class="about-us__item-discription">
                             <span class="about-us__item-discription_title">В&nbsp;своём стремлении повысить</span><br> Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества.
                         </p>
@@ -169,35 +157,35 @@
                     Как мы работаем
                 </h2>
 
-                <ul id="js-step-btn" class="working__step-list">
+                <ul class="working__step-list">
                     <li class="working__step-item">
-                        <a class="working__step-link working__step-link_active" href="#step1" value="25">
+                        <button class="working__step-btn working__step-btn_active" name="#step1" value="25">
                             1 шаг
-                        </a>
+                        </button>
                     </li>
 
                     <li class="working__step-item">
-                        <a class="working__step-link" href="#step2" value="50">
+                        <button class="working__step-btn" name="#step2" value="50">
                             2 шаг
-                        </a>
+                        </button>
                     </li>
 
                     <li class="working__step-item">
-                        <a class="working__step-link" href="#step3" value="75">
+                        <button class="working__step-btn" name="#step3" value="75">
                             3 шаг
-                        </a>
+                        </button>
                     </li>
 
                     <li class="working__step-item">
-                        <a class="working__step-link" href="#step4" value="100">
+                        <button class="working__step-btn" name="#step4" value="100">
                             4 шаг
-                        </a>
+                        </button>
                     </li>
                 </ul>
 
                 <progress id="js-progress" class="working__step-progress" value="25" max="100"></progress>
 
-                <ul id="js-step-list" class="working__info-list">
+                <ul class="working__info-list">
                     <li id="step1" class="working__info-item working__info-item_active working__info-item_active-opacity">
                         <div class="working__info-content">
                             <h3 class="working__info-title">
@@ -295,13 +283,13 @@
 
             <ul class="questions__list">
                 <li class="questions__item">
-                    <div class="questions__container-questions">
+                    <button class="questions__btn-questions" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false">
                         <h3 class="questions__title-questions">
                             Из чего формируется конечная стоимость проекта?
                         </h3>
 
-                        <button class="questions__item-btn" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false"></button>
-                    </div>
+                        <span class="questions__item-btn-icon" aria-label="декоротивный элемент"></span>
+                    </button>
 
                     <div id="questions1" class="questions__container-response">
                         <p class="questions__response">
@@ -313,13 +301,13 @@
                 </li>
 
                 <li class="questions__item">
-                    <div class="questions__container-questions">
+                    <button class="questions__btn-questions" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false">
                         <h3 class="questions__title-questions">
                             У меня есть свой проект. Сможем ли мы его доработать / реализовать?
                         </h3>
 
-                        <button class="questions__item-btn" aria-label="показать/скрыть ответ" type="button" aria-controls="questions2" aria-expanded="false"></button>
-                    </div>
+                        <span class="questions__item-btn-icon" aria-label="декоротивный элемент"></span>
+                    </button>
 
                     <div id="questions2" class="questions__container-response">
                         <p class="questions__response">
@@ -329,13 +317,13 @@
                 </li>
 
                 <li class="questions__item">
-                    <div class="questions__container-questions">
+                    <button class="questions__btn-questions" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false">
                         <h3 class="questions__title-questions">
                             Я выбираю между разными компаниями. В чём ваше отличие?
                         </h3>
 
-                        <button class="questions__item-btn" aria-label="показать/скрыть ответ" type="button" aria-controls="questions3" aria-expanded="false"></button>
-                    </div>
+                        <span class="questions__item-btn-icon" aria-label="декоротивный элемент"></span>
+                    </button>
 
                     <div id="questions3" class="questions__container-response">
                         <p class="questions__response">
@@ -349,13 +337,13 @@
                 </li>
 
                 <li class="questions__item">
-                    <div class="questions__container-questions">
+                    <button class="questions__btn-questions" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false">
                         <h3 class="questions__title-questions">
                             Могу ли я делегировать вам работу / согласование с подрядчиком / организацией? 
                         </h3>
 
-                        <button class="questions__item-btn" aria-label="показать/скрыть ответ" type="button" aria-controls="questions4" aria-expanded="false"></button>
-                    </div>
+                        <span class="questions__item-btn-icon" aria-label="декоротивный элемент"></span>
+                    </button>
 
                     <div id="questions4" class="questions__container-response">
                         <p class="questions__response">
@@ -365,13 +353,13 @@
                 </li>
 
                 <li class="questions__item">
-                    <div class="questions__container-questions">
+                    <button class="questions__btn-questions" aria-label="показать/скрыть ответ" type="button" aria-controls="questions1" aria-expanded="false">
                         <h3 class="questions__title-questions">
                             Могу ли я вернуть деньги на каком-либо из этапов работ?
                         </h3>
 
-                        <button class="questions__item-btn" aria-label="показать/скрыть ответ" type="button" aria-controls="questions5" aria-expanded="false"></button>
-                    </div>
+                        <span class="questions__item-btn-icon" aria-label="декоротивный элемент"></span>
+                    </button>
 
                     <div id="questions5" class="questions__container-response">
                         <p class="questions__response">
@@ -387,7 +375,7 @@
 
     <footer id="footer" class="footer container">
         <div class="footer__nav-block">
-            <a class="footer__logo-link scroll" href="#header" aria-label="cсылка на главную">
+            <a class="footer__logo-link scroll" href="#header" aria-label="обновить страницу">
                 <picture>
                     <source type="image/webp" srcset="img/footer-logo/320.webp" media="(max-width: 767px)">
                     <source type="image/webp" srcset="img/footer-logo/768.webp" media="(min-width: 768px) and (max-width: 1023px)">
