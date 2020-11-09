@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
         aboutUs.classList.add('about-us__info-baner-img');
     };
 
-    //bloack working
+    //block working
 
     const slideList = document.querySelector('#js-working-slide-list').children;
 
@@ -34,8 +34,5 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         imgContainer.style.backgroundImage = `url(${img})`;
-
-
-        
     }
 });
