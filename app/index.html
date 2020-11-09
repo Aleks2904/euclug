@@ -157,7 +157,7 @@
                     Как мы работаем
                 </h2>
 
-                <ul class="working__step-list">
+                <ul  id="js-working-btn-list" class="working__step-list">
                     <li class="working__step-item">
                         <button class="working__step-btn working__step-btn_active" name="#step1" value="25">
                             1 шаг
@@ -185,7 +185,7 @@
 
                 <progress id="js-progress" class="working__step-progress" value="25" max="100"></progress>
 
-                <ul class="working__info-list">
+                <ul id="js-working-slide-list" class="working__info-list">
                     <li id="step1" class="working__info-item working__info-item_active working__info-item_active-opacity">
                         <div class="working__info-content">
                             <h3 class="working__info-title">
@@ -210,10 +210,7 @@
                             </ul>
                         </div>
 
-                        <picture>
-                            <source type="image/webp" srcset="img/block-working/руки.webp">
-                            <img class="working__info-img" src="img/block-working/руки.jpg" alt="руки какого то мужика">
-                        </picture>
+                        <div class="working__info-img"></div>
                     </li>
 
                     <li id="step2" class="working__info-item">
@@ -229,10 +226,7 @@
                             </p>
                         </div>
 
-                        <picture>
-                            <source type="image/webp" srcset="img/block-working/рыбка1.webp">
-                            <img class="working__info-img" src="img/block-working/рыбка1.jpg" alt="рыбка">
-                        </picture>
+                        <div class="working__info-img"></div>
                     </li>
 
                     <li id="step3" class="working__info-item">
@@ -246,10 +240,7 @@
                             </p>
                         </div>
 
-                        <picture>
-                            <source type="image/webp" srcset="img/block-working/ведьмак.webp">
-                            <img class="working__info-img" src="img/block-working/ведьмак.jpg" alt="Плотва и какие то 2 мужика">
-                        </picture>
+                        <div class="working__info-img"></div>
                     </li>
 
                     <li id="step4" class="working__info-item">
@@ -267,10 +258,7 @@
                             </p>
                         </div>
 
-                        <picture>
-                            <source type="image/webp" srcset="img/block-working/рыбка2.webp">
-                            <img class="working__info-img" src="img/block-working/рыбка2.jpg" alt="рыбка 2">
-                        </picture>
+                        <div class="working__info-img"></div>
                     </li>
                 </ul>
             </div>
@@ -492,7 +480,7 @@
           </p>  
         </aside>
     </footer>
-    
+
     <script src="js/all.js"></script>
 </body>
 </html>
