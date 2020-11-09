@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function(){
         let img;
 
         if(result == true){
-            img = `../img/block-working/${id}.webp`
+            img = `img/block-working/${id}.webp`
         }else{
-            img = `../img/block-working/${id}.jpeg`
+            img = `img/block-working/${id}.jpeg`
         }
 
         imgContainer.style.backgroundImage = `url(${img})`;
