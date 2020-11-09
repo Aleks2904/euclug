@@ -103,15 +103,43 @@
     }
 
     &__info-baner-img{
-        background-image: url("../img/block-aboutUs/img1.jpg");
+        &:before{
+            background-image: url("../img/block-aboutUs/img1.jpg");
+        }
     }
 
     &__info-baner-img-webp{
-        background-image: url("../img/block-aboutUs/img1.webp");
+        &:before{
+            background-image: url("../img/block-aboutUs/img1.webp");
+        }
     }
 
     &__info-baner {
         background-repeat: no-repeat;
+
+        position: relative;
+
+        &:before{
+            content: '';
+            background-size:cover;
+
+            display: block;
+
+            height: 100%;
+
+            @include px768{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+
+            @include px767{
+                position: relative;
+                min-height: 200px;
+            }
+        }
 
         @include px768{
             background-position: center;
@@ -202,6 +230,10 @@
 
             padding-left: 30px;
             padding-right: 30px;
+        }
+
+        @include px767{
+            padding-top: 8px;
         }
     }
 
@@ -305,7 +337,7 @@
                 width: 70px;
                 height: 55px;
     
-                margin-bottom: 6px;
+                margin-bottom: 8px;
             }
         }
 
@@ -374,7 +406,7 @@
         @include px767 {
             
             &:not(:last-child){
-                margin-bottom: 20px;
+                margin-bottom: 22px;
             }
         }
     }

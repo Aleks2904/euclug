@@ -27,12 +27,12 @@
         }
 
         @include px1920{
-            margin-bottom: 83px;
+            margin-bottom: 79px;
             margin-left: -1px;
         }
 
-        @include px768-1919{
-            margin-bottom: 78px;
+        @include px768-1399{
+            margin-bottom: 74px;
             margin-left: -4px;
         }
 
@@ -60,7 +60,7 @@
     &__step-item {
         @include px1024{
             &:not(:last-child){
-                margin-right: 92px;
+                margin-right: 86px;
             }
         }
     }
@@ -90,16 +90,17 @@
 
     progress {
         border: 2px solid $BLACK;
-        border-radius: 15px; 
+        border-radius: 15px;
+    
 
         @include px1024{
             width: 470px;
-            margin-bottom: 21px;
+            margin-bottom: 18px;
         }
 
         @include px1023{
             width: 100%;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
     }
     progress::-webkit-progress-bar {
@@ -141,7 +142,12 @@
     }
 
     &__info-content {
-        @include px1024{
+        @include px1400 {
+            width: 49%;
+            margin-left: 2px;
+        }
+
+        @include px1024-1399{
             width: 45%;
             margin-left: 2px;
         }
@@ -205,9 +211,29 @@
 
     &__list-full-info {
         display: flex;
+
+        @include px1024-1399{
+            margin-left: -2px;
+        }
     }
 
     &__item-full-info {
+        @include px1920{
+            margin-top: 62px;
+        }
+
+        @include px1024-1919{
+            margin-top: 30px;
+        }
+
+        @include px768-1023{
+            margin-top: 29px;
+        }
+
+        @include px767{
+            margin-top: 20px;
+        }
+
         @include px768 {
             &:not(:last-child){
                 margin-right: 30px;
@@ -237,17 +263,8 @@
             letter-spacing: 0.5px;
         }
 
-        @include px1920{
-            margin-top: 61px;
-        }
-
-        @include px768-1919{
-            margin-top: 30px;
-        }
-
         @include px767{
             font-size: 14px;
-            margin-top: 20px;
         }
 
         &_details {
@@ -320,11 +337,13 @@
 
         @include px768-1023{
             height: 284px;
+            width: 100%;
             margin-bottom: 40px;
         }
 
         @include px767{
             height: 160px;
+            width: 100%;
             margin-bottom: 11px;
         }
     }

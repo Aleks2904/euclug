@@ -56,7 +56,6 @@
     }
 
     &__btn-open-menu {
-
         cursor: pointer;
 
         @include px1920 {
@@ -206,10 +205,6 @@
     &__nav{
         @include px1920{
             padding-top: 5px;
-        }
-
-        @include px1919{
-            margin-top: 20%;
         }
     }
 

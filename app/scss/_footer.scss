@@ -2,7 +2,12 @@
     display: flex;
     background-color: $FOOTER;
 
-    @include px1024{
+    @include px1400{
+        padding-top: 41px;
+        padding-bottom: 56px;
+    }
+
+    @include px1024-1399{
         padding-top: 41px;
         padding-bottom: 80px;
     }
@@ -267,7 +272,7 @@
         }
 
         @include px1400{
-            margin-bottom: 50px;
+            margin-bottom: 54px;
         }
 
         @include px1024-1399{
@@ -334,19 +339,16 @@
         }
 
         @include px1400{
-            padding: 19px;
+            padding: 12px 19px;
             margin-bottom: 26px;
         }
 
-        @include px768-1399{
-            padding: 19px 22px;
+        @include px1399{
+            padding: 12px 22px;
             margin-bottom: 25px;
         }
 
         @include px767{
-            padding: 19px 22px;
-            margin-bottom: 25px;
-
             font-size: 14px;
             letter-spacing: 0.4px;
         }
@@ -389,7 +391,7 @@
 
         @include px1400{
             padding: 12px 21px;
-            margin-bottom: 32px;
+            margin-bottom: 30px;
             height: 148px;
         }
 
@@ -575,7 +577,7 @@
     &__aside-block {
         @include px1400{
             width: 20.5%;
-            margin-top: 85px;
+            margin-top: 86px;
             margin-left: 13.3%;
         }
 
