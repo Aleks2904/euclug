@@ -55,8 +55,6 @@ $( document ).ready(function(){
               btnIcon = li.find('.questions__item-btn-icon'),
               btn = li.find('.questions__btn-questions');
 
-              console.log(btnIcon)
-
         pElem.hide('slowe');      
         text.removeClass('questions__response_active1');
         btn.attr("aria-expanded", "false");

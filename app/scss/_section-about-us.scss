@@ -315,7 +315,7 @@
     &__item {
         &::before{
             @include px1024 {
-                width: 240px;
+                width: 25%;
                 height: 150px;
             }
     
@@ -373,8 +373,8 @@
         @include px1400 {
             height: 295px;
 
-            padding-right: 110px;
-            padding-left: 30px;
+            padding-right: 13%;
+            padding-left: 7%;
 
             &:not(:last-child){
                 margin-bottom: 30px;
@@ -423,6 +423,7 @@
 
         @include px1024{
             letter-spacing: .5px;
+            max-width: 67%;
         }
 
         @include px768-1023{
