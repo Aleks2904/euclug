@@ -1,14 +1,14 @@
 .about-us {
     @include px1400{
-        margin-bottom: 128px;
+        margin-bottom: 103px;
     }
 
     @include px768-1399{
-        margin-bottom: 90px;
+        margin-bottom: 62px;
     }
 
     @include px767{
-        margin-bottom: 66px;
+        margin-bottom: 52px;
     }
 
     &__container {
@@ -40,31 +40,21 @@
     }
 
     &__title {
-        font-weight: 400;
-        line-height: 1;
-        color: $BLACK;
-
+        @include title;
 
         @include px1400 {
-            letter-spacing: 2.4px;
-            font-size: 48px;
-
             margin-left: 3px;
+            margin-bottom: 20px;
+        }
+
+        @include px1024-1399{
             margin-bottom: 26px;
-        }
-
-        @include px768-1399 {
-            letter-spacing: 2.6px;
-            font-size: 48px;
-
             margin-left: -2px;
-            margin-bottom: 31px;
         }
 
-        @include px767 {
-            font-size: 24px;
-            letter-spacing: 1.8px;
-            margin-bottom: 4px;
+        @include px768-1023 {
+            margin-left: -2px;
+            margin-bottom: 25px;
         }
     }
 
@@ -384,8 +374,8 @@
         @include px1024-1399 {
             height: 295px;
 
-            padding-right: 120px;
-            padding-left: 80px;
+            padding-right: 10.5%;
+            padding-left: 12%;
 
             &:not(:last-child){
                 margin-bottom: 40px;

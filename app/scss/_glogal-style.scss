@@ -30,6 +30,26 @@ $paddingXContainer320: 15px;
     }
 }
 
+@mixin title {
+    font-weight: 400;
+    color: $BLACK;
+    
+    @include px1024{
+        font-size: 48px;
+        letter-spacing: 2.2px;
+    }
+
+    @include px768-1023{
+        font-size: 47px;
+        letter-spacing: 2.3px;
+    }
+
+    @include px767 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
 .open-modal{
     overflow: hidden;
     &::after{

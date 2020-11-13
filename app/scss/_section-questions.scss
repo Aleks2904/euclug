@@ -1,17 +1,14 @@
 .questions {
 
     &__title {
-        @include px1024{
-            font-size: 48px;
-            line-height: 1px;
-            font-weight: 400;
-            letter-spacing: 2.2px;
-
-            margin-bottom: 66px;
-        }
+        @include title;
 
         @include px1920{
             margin-left: 2px;
+        }
+
+        @include px1024{
+            margin-bottom: 66px;
         }
 
         @include px1024-1399{
@@ -19,21 +16,11 @@
         }
 
         @include px768-1023{
-            font-size: 47px;
-            line-height: 1px;
-            font-weight: 400;
-            letter-spacing: 2.3px;
-
             margin-left: 2px;
             margin-bottom: 66px;
         }
 
         @include px767 {
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 29px;
-            font-weight: 400;
-
             margin-bottom: 12px;
         }
     }
