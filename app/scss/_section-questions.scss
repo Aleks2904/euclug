@@ -49,11 +49,15 @@
     &__btn-questions {
         display: flex;
         justify-content: space-between;
+        position: relative;
         align-items: center;
         width: 100%;
         border: none;
         outline: none;
         background-color: transparent;
+
+        transition: color 0.3s;
+        text-align: left;
 
         cursor: pointer;
 
@@ -64,8 +68,8 @@
             transition: background-color 0.3s;
         }
 
-        &:hover > .questions__title-questions,
-        &:focus > .questions__title-questions{
+        &:hover,
+        &:focus{
             color: $YELLOW;
             transition: color 0.3s;
         }
@@ -75,66 +79,52 @@
             padding-right: 2px;
         }
 
+        @include px768{
+            font-weight: 700;
+        }
+
         @include px1400{
             padding-top: 29px;
             padding-bottom: 31px;
+
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 1px;
         }
 
         @include px1024-1399{
             padding: 0;
             padding-top: 35px;
             padding-bottom: 33px;   
+
+            padding-right: 30%;
+
+            line-height: 32px;
+            font-size: 22px;
         }
 
         @include px768-1023{
             padding: 0;
             padding-top: 35px;
             padding-bottom: 24px;   
+
+           padding-right: 26%;
+
+            font-size: 22px;
+            line-height: 32px;
+            letter-spacing: 1px;
         }
 
         @include px767{
             padding-top: 21px;
             padding-bottom: 22px;   
             padding-left: 1px;
-        }
-    }
 
-    &__title-questions {
-        cursor: pointer;
-        transition: color 0.3s;
-        text-align: left;
+            padding-right: 30%;
 
-        @include px1400{
-            font-size: 24px;
-            line-height: 32px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        @include px1024-1399{
-            max-width: 70%;
-
-            line-height: 32px;
-            font-size: 22px;
-        }
-
-        @include px768-1023{
-            font-size: 22px;
-            line-height: 32px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            
-        }
-
-        @include px768-1023{
-            max-width: 84%;
-        }
-
-        @include px767{
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
-            max-width: 70%;
         }
     }
 
@@ -142,7 +132,8 @@
         outline: none;
         cursor: pointer;
 
-        position: relative;
+        position: absolute;
+        right: 0;
 
         border-radius: 50%;
 

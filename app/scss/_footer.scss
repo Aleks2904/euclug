@@ -193,19 +193,51 @@
                 margin-right: 25px;
             }
         }
+
+        &:nth-child(1) > .footer__social-link{
+            background-image: inline-svg("facebook", $SVG-COLOR );
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+        }
+
+        &:nth-child(2) > .footer__social-link{
+            background-image: inline-svg("vk", $SVG-COLOR );
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+        }
+
+        &:nth-child(3) > .footer__social-link{
+            background-image: inline-svg("instagram", $SVG-COLOR );
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+        }
+
+        &:nth-child(1):hover > .footer__social-link{
+            background-image: inline-svg("facebook", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
+        &:nth-child(2):hover > .footer__social-link{
+            background-image: inline-svg("vk", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
+        &:nth-child(3):hover > .footer__social-link{
+            background-image: inline-svg("instagram", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
+
     }
 
     &__social-link {
         display: block;
         outline: none;
 
-        &:hover > .footer__social-svg,
-        &:active > .footer__social-svg,
-        &:focus > .footer__social-svg{
-            fill: $YELLOW;
-
-            transition: fill 0.3s;
-        }
+        transition: background-image 0.3s;
 
         @include px768{         
             width: 60px;
@@ -216,17 +248,6 @@
             width: 35px;
             height: 35px;
         }
-    }
-
-    &__social-svg {
-        fill: $SVG-COLOR;
-
-        width: 100%;
-        height: 100%;
-
-        transition: fill 0.3s;
-
-        pointer-events: none;
     }
 
     //form block
