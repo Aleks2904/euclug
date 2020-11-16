@@ -4,6 +4,7 @@
     &__container {
         display: flex;
         align-items: center;
+        position: relative;
 
         @include px1920 {
             height: 102px;
@@ -25,7 +26,6 @@
     &__skip{
         position: absolute;
         display: block;
-        left: 20%;
         text-transform: uppercase;
         font-style: italic;
         padding: 5px;
@@ -41,6 +41,22 @@
             opacity: 1;
             z-index: 1;
             transition: opacity 0.3s;
+        }
+
+        @include px1400 {
+            left: 20%;
+        }
+
+        @include px1024-1399 {
+            left: 15%;
+        }
+
+        @include px768-1023 {
+            left: 13%;
+        }
+
+        @include px767 {
+            left: 40%;
         }
     }
 
