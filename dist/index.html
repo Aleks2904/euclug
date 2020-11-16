@@ -19,6 +19,10 @@
 <body>
     <header id="header" class="header">
         <div class="header__container container">
+            <a href="#main" class="header__skip" id="js-skip">
+                скипнуть навигацию
+            </a>
+
             <a href="#header" class="header__logo-a scroll" aria-label="обновить страницу">
                 <picture>
                     <source type="image/webp" srcset="img/header-logo/Логотип-320+.webp" media="(max-width: 767px)">
@@ -86,15 +90,9 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main">
         <section id="presentation" class="presentation container">
             <div class="presentation__container">
-                <div id="js-presentation-swiper" class="swiper-container">
-                    <ul id="js-presentation-track" class="swiper-wrapper"></ul>
-
-                    <div id="js-presentation-pagination" class="swiper-pagination presentation__pagination"></div>
-                </div>
-
                 <div class="presentation__info-container">
                     <h1 class="presentation__titel">
                         Проектные решения любой сложности
@@ -107,6 +105,12 @@
                     <button class="presentation__btn">
                         Заказать расчёт
                     </button>
+                </div>
+
+                <div id="js-presentation-swiper" class="swiper-container">
+                    <ul id="js-presentation-track" class="swiper-wrapper"></ul>
+
+                    <div id="js-presentation-pagination" class="swiper-pagination presentation__pagination"></div>
                 </div>
             </div>
         </section>
