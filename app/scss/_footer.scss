@@ -220,12 +220,27 @@
             transition: background-image 0.3s;
         }
 
+        &:nth-child(1) > .footer__social-link:focus{
+            background-image: inline-svg("facebook", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
         &:nth-child(2):hover > .footer__social-link{
             background-image: inline-svg("vk", $YELLOW );
             transition: background-image 0.3s;
         }
 
+        &:nth-child(2) > .footer__social-link:focus{
+            background-image: inline-svg("vk", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
         &:nth-child(3):hover > .footer__social-link{
+            background-image: inline-svg("instagram", $YELLOW );
+            transition: background-image 0.3s;
+        }
+
+        &:nth-child(3) > .footer__social-link:focus{
             background-image: inline-svg("instagram", $YELLOW );
             transition: background-image 0.3s;
         }
