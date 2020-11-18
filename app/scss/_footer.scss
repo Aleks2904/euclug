@@ -1,36 +1,39 @@
 .footer {
-    display: flex;
     background-color: $FOOTER;
 
-    @include px1400{
-        padding-top: 41px;
-        padding-bottom: 56px;
-    }
-
-    @include px1024-1399{
-        padding-top: 41px;
-        padding-bottom: 80px;
-    }
-
-    @include px1023{
-        flex-direction: column;
-
-        padding-top: 89px;
-        padding-bottom: 80px;
-    }
-
-    @include px768-1023{
-        flex-direction: column;
-
-        padding-top: 89px;
-        padding-bottom: 60px;
-    }
-
-    @include px767{
-        flex-direction: column;
-
-        padding-top: 53px;
-        padding-bottom: 25px;
+    &__container{
+        display: flex;
+    
+        @include px1400{
+            padding-top: 41px;
+            padding-bottom: 56px;
+        }
+    
+        @include px1024-1399{
+            padding-top: 41px;
+            padding-bottom: 80px;
+        }
+    
+        @include px1023{
+            flex-direction: column;
+    
+            padding-top: 89px;
+            padding-bottom: 80px;
+        }
+    
+        @include px768-1023{
+            flex-direction: column;
+    
+            padding-top: 89px;
+            padding-bottom: 60px;
+        }
+    
+        @include px767{
+            flex-direction: column;
+    
+            padding-top: 53px;
+            padding-bottom: 25px;
+        }
     }
 
     &__nav-block {
@@ -524,15 +527,24 @@
 
         position: relative;
 
+        &:hover > .footer__form-span-text{
+            color: $YELLOW;
+            transition: color 0.3s;
+        }
+
+        &:hover > .footer__form-span-check{
+            border-color: $YELLOW;
+            transition: border-color 0.3s;
+        }
+    }
+
+    &__form-span-text{
+        white-space: nowrap;
+
         color: $WHITE-GRAY;
         line-height: 1px;
 
         transition: color 0.3s;
-
-        &:hover{
-            color: $YELLOW;
-            transition: color 0.3s;
-        }
 
         @include px1024{
             font-weight: 400;
@@ -562,6 +574,10 @@
 
     &__form-input-check:focus + .footer__form-span-check{
         border-color: $YELLOW;
+    }
+
+    &__form-input-check:focus ~ .footer__form-span-text{
+        color: $YELLOW;
     }
 
     &__form-input-check:checked + .footer__form-span-check{
@@ -606,6 +622,8 @@
 
         background-color: transparent;
         border: 1.5px solid $SVG-COLOR;
+
+        transition: border-color 0.3s;
     }
 
     //flood block
