@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const slideList = document.querySelector('#js-working-slide-list').children;
 
-    for(i = 0; i < slideList.length; i++){
+    for(let i = 0; i < slideList.length; i++){
         const id = slideList[i].id;
 
         const item = document.querySelector(`#${id}`),

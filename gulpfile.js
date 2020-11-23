@@ -15,6 +15,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     sassInlineSvg = require('gulp-sass-inline-svg'),
     svgmin        = require('gulp-svgmin'),
     sourcemap     = require('gulp-sourcemaps'),
+    babel         = require('gulp-babel'),
 
     browserSync   = require('browser-sync').create();
 
@@ -66,6 +67,9 @@ function styles() {
 function scripts() {
     return gulp.src(jsFiles)
         .pipe(sourcemap.init())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
 		.pipe(concat('all.js'))
 		.pipe(uglify({
 			toplevel: true,
